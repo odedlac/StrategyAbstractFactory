@@ -8,6 +8,7 @@ import static org.junit.Assert.*;
 import org.junit.BeforeClass;
 import org.junit.Test;
 
+import vehicles.AirPlaneFactory;
 import vehicles.Airplane;
 import vehicles.FlyingFactory;
 import vehicles.Flying;
@@ -38,7 +39,7 @@ public class AirplaneTest {
 		String expectedOutput = "Like a fighter jet";
 		String stringReturned = null;
 		
-		HarrierFactory harrierFactory = new HarrierFactory();
+		AirPlaneFactory harrierFactory = new HarrierFactory();
 		
 		Flying fly = harrierFactory.createFlying();
 
