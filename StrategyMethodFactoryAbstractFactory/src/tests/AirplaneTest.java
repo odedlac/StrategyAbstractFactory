@@ -11,6 +11,7 @@ import org.junit.Test;
 import vehicles.Airplane;
 import vehicles.FlyingFactory;
 import vehicles.Flying;
+import vehicles.HarrierFactory;
 
 import vehicles.LiftOff;
 import vehicles.LiftOffFactory;
@@ -37,9 +38,11 @@ public class AirplaneTest {
 		String expectedOutput = "Like a fighter jet";
 		String stringReturned = null;
 		
-		Flying fly = flyingFactory.createFlying("Fighter Jet");
+		HarrierFactory harrierFactory = new HarrierFactory();
+		
+		Flying fly = harrierFactory.createFlying();
 
-		LiftOff liftOff = liftOffFactory.createLiftOff("Fighter Jet");
+		LiftOff liftOff = harrierFactory.createLiftOff();
 
 		Airplane classUnderTest = new Airplane(liftOff,fly);
 
